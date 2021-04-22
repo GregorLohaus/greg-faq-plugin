@@ -1,7 +1,7 @@
 Shopware.Module.register('greg-faq', {
     type: 'plugin',
     name: 'Faq',
-    title: 'FAQ',
+    title: 'FAQS',
     description: 'sw-property.general.descriptionTextModule',
     color: 'ff6ee0',
     icon: 'default-badge-help',
@@ -12,12 +12,12 @@ Shopware.Module.register('greg-faq', {
         }
     },
     navigation: [{
-        label: 'Faq',
+        label: 'Faqs',
         color: 'ff6ee0',
         path: 'greg.faq.faqlist',
         icon: 'default-badge-help',
         position: 100,
-        parent: 'sw-catalogue'
+        parent: 'sw-extension'
     }],
 })
 //TODO finish navigation configuration

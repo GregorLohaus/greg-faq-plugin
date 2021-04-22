@@ -1,0 +1,20 @@
+{% block greg_faqlist %}
+    <sw-page class="greg-faqlist">
+        <template #smart-bar-actions>
+            <sw-button variant="primary" :routerLink="{ name: 'greg.faq.faqcreate' }">
+                NEW
+            </sw-button>
+        </template>
+        <template slot="content">
+            <sw-entity-listing
+                v-if="faqs"
+                :item="faqs"
+                :repository="repository"
+                :showSelection="false"
+                :columns="columns"
+                detailRoute="greg.faq.faqdetail">
+
+            </sw-entity-listing>
+        </template>
+    </sw-page>
+{% endblock %}
