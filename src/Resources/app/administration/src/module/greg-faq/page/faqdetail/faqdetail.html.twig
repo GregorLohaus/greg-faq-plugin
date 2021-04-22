@@ -1,0 +1,29 @@
+{% block greg_faqdetail %}
+    <sw-page class="greg-faqdetail">
+        <template slot="smart-bar-actions">
+            <sw-button-process
+                :isLoading="isLoading"
+                :processSuccess="processSuccess"
+                variant ="primary"
+                @process-finish ="saveFinish"
+                @click="onClickSave">
+                SAVE
+            </sw-button-process>
+        </template>
+        <template slot="content">
+            <sw-card-view>
+                <sw-card v-if="faq" :isLoading="isLoading">
+                    <sw-field v-model="faq.question" ></sw-field>
+                    <sw-field v-model="faq.answer" ></sw-field>
+                    TODO ADD sw-entity-many-to-many-select
+                </sw-card>
+                <sw-card v-if="myDebugVar == 1">
+                    FAQ DETAIL SET DEBUGVAR
+                </sw-card>
+                <sw-card v-if="myDebugVar == 2">
+                    FAQ CREATE OVERRIDE SET DEBUGVAR
+                </sw-card>
+            </sw-card-view>
+        </template>
+    </sw-page>
+{% endblock %}

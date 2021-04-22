@@ -1,3 +1,6 @@
+import './page/faqlist'
+import './page/faqcreate'
+import './page/faqdetail'
 Shopware.Module.register('greg-faq', {
     type: 'plugin',
     name: 'Faq',
@@ -9,6 +12,20 @@ Shopware.Module.register('greg-faq', {
         faqlist: {
             component: 'faqlist',
             path: 'faqlist'
+        },
+        faqdetail: {
+            component: 'faqdetail',
+            path: 'detail/:id',
+            meta: {
+                parentPath: 'greg.faq.faglist'
+            }
+        },
+        faqcreate: {
+            component: 'faqcreate',
+            path: 'create',
+            meta: {
+                parentPath: 'greg.faq.faqlist'
+            }
         }
     },
     navigation: [{

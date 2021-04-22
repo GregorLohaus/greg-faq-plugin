@@ -5,11 +5,11 @@ namespace Greg\FaqPlugin\Migration;
 use Doctrine\DBAL\Connection;
 use Shopware\Core\Framework\Migration\MigrationStep;
 
-class Migration1619057875 extends MigrationStep
+class Migration1619115153 extends MigrationStep
 {
     public function getCreationTimestamp(): int
     {
-        return 1619057875;
+        return 1619115153;
     }
 
     public function update(Connection $connection): void
@@ -19,6 +19,8 @@ class Migration1619057875 extends MigrationStep
                 `id` BINARY(16) NOT NULL,
                 `question` VARCHAR(255) COLLATE utf8mb4_unicode_ci,
                 `answer` VARCHAR(255) COLLATE utf8mb4_unicode_ci,
+                `created_at` DATETIME(3) NOT NULL,
+                `updated_at` DATETIME(3),
                 PRIMARY KEY (`id`)
             )
                 ENGINE = InnoDB
@@ -26,7 +28,6 @@ class Migration1619057875 extends MigrationStep
                 COLLATE = utf8mb4_unicode_ci;
             SQL;
         $connection->executeStatement($sql);
-
     }
 
     public function updateDestructive(Connection $connection): void

@@ -44,7 +44,7 @@ Shopware.Component.register('faqlist', {
             }];
         }
     }
-    //TODO add create component
+
 
 
 });
