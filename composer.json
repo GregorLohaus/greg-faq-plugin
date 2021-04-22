@@ -1,0 +1,30 @@
+{
+    "name": "greg/faq-plugin",
+    "description": "Bundle example",
+    "version": "v1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gregor Lohaus"
+        }
+    ],
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "type": "shopware-platform-plugin",
+    "autoload": {
+        "psr-4": {
+            "Greg\\FaqPlugin\\": "src/"
+         }
+    },
+        "extra": {
+        "shopware-plugin-class": "Greg\\FaqPlugin\\FaqPlugin",
+        "copyright": "(c) by Gregor Lohaus",
+        "label": {
+            "de-DE": "Faq Plugin",
+            "en-GB": "Faq Plugin"
+        }
+    }
+}
