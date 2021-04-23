@@ -13,6 +13,7 @@
         <template slot="content">
             <sw-card-view>
                 <sw-card v-if="faq" :isLoading="isLoading">
+                    <!-- TODO add labels -->
                     <sw-field v-model="faq.question" ></sw-field>
                     <sw-field v-model="faq.answer" ></sw-field>
                     <sw-entity-many-to-many-select

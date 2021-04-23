@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 namespace Greg\FaqPlugin;
-
+// TODO try to add documentation
 use Doctrine\DBAL\Connection;
 use Shopware\Core\Framework\DataAbstractionLayer\Indexing\EntityIndexerRegistry;
 use Shopware\Core\Framework\Plugin;

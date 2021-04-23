@@ -1,0 +1,26 @@
+{% block sw_product_detail_attribute_sets %}
+    {% parent %}
+    <sw-card :isLoadig="isLoading" title="FAQs">
+        <sw-inherit-wrapper v-if="!isLoading"
+                            v-model="product.extensions.faqs"
+                            :inheritedValue="parentProduct.extensions ? parentProduct.extensions.faqs : null"
+                            :hasParent="!!parentProduct.id"
+                            isAssociation
+                            @inheritance-remove="saveProduct"
+                            @inheritance-restore="saveProduct">
+                            <!-- TODO look this up when shopware component library website is available again -->
+                            <!-- TODO add label like: :lable=""-->
+            <template #content="{ currentValue, isInherited, updateCurrentValue}">
+                <sw-entity-many-to-many-select
+                    :localMode="product.isNew()"
+                    :entityCollection="currentValue"
+                    @input="updateCurrentValue"
+                    labelProperty="question"
+                    :disabled="isInherited"
+                    :key="isInherited"
+                    placeholder="Question?">
+                </sw-entity-many-to-many-select>
+            </template>
+        </sw-inherit-wrapper>
+    </sw-card:>
+{% endblock %}
