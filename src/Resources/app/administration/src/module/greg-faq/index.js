@@ -17,7 +17,7 @@ Shopware.Module.register('greg-faq', {
             component: 'faqdetail',
             path: 'detail/:id',
             meta: {
-                parentPath: 'greg.faq.faglist' //TODO this doesnt work?
+                parentPath: 'greg.faq.faqlist' //TODO this doesnt work? edit: problem magically disappeared ¯\_(ツ)_/¯
             }
         },
         faqcreate: {
