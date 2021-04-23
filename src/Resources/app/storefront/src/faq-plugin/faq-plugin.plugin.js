@@ -1,6 +1,6 @@
 import Plugin from 'src/plugin-system/plugin.class'
 //TODO add integration section to config section (of main plugin)
-//TODO pass client_id and client_secret to Productdetail page possibly through Subscriber
+//TODO pass client_id and client_secret to Productdetail page possibly through Subscriber EDIT: probably a bad idea look for alternatives
 export default class FaqPlugin extends Plugin {
     init() {
         console.log('JsPlugin Registered');
