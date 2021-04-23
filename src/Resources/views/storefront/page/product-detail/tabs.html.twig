@@ -23,19 +23,23 @@
              role="tabpanel"
              aria-labelledby="faq-tab">
 
-            <div class="cotainer faq-container ">
+            <div class="container faq-container " id="faq-js">
+                <h3>Frequently asked Questions</h3>
                 {% for faq in page.product.extension('faqs').elements %}
                     <div class="card">
                         <div class="card-text">
-                            <h3>Question: {{ faq.question }}</h3>
+                            <h4>Question: {{ faq.question }}</h4>
                         </div>
                         <div class="card-text">
-                            <h4>Answer: {{ faq.answer }}</h4>
+                            <h5>Answer: {{ faq.answer }}</h5>
                         </div>
+                        <!-- use for unfinished js Plugin see Resources/app/storefront/src/faq-plugin/faq-plugin.plugin.js
                         <div class="card-subtitle">
                             <span>Was this helpful to you?</span>
-                            <input type="checkbox">
+                            <input type="hideen" id="faq-id" value="{{ faq.id }}">
+                            <input type="checkbox" id="faq-js-checkbox-{{ faq.id }}">
                         </div>
+                        -->
                     </div>
                     <div class="card">
                         <div class="card-title">

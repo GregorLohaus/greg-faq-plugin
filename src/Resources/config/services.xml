@@ -15,6 +15,7 @@
             <tag name="shopware.entity.definition" entity="greg_faq_product"/>
         </service>
         <service id="Greg\FaqPlugin\Storefront\Page\Product\Subscriber\ProductPageCriteriaSubscriber">
+            <argument id="Shopware\Core\System\SystemConfig\SystemConfigService" type="service"/>
             <tag name="kernel.event_subscriber"/>
         </service>
     </services>

@@ -17,7 +17,7 @@ Shopware.Module.register('greg-faq', {
             component: 'faqdetail',
             path: 'detail/:id',
             meta: {
-                parentPath: 'greg.faq.faglist'
+                parentPath: 'greg.faq.faglist' //TODO this doesnt work?
             }
         },
         faqcreate: {
@@ -37,4 +37,4 @@ Shopware.Module.register('greg-faq', {
         parent: 'sw-extension'
     }],
 })
-//TODO finish navigation configuration
+

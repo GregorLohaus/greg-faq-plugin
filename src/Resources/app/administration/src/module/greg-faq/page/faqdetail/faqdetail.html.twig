@@ -14,20 +14,23 @@
             <sw-card-view>
                 <sw-card v-if="faq" :isLoading="isLoading">
                     <!-- TODO add labels -->
-                    <sw-field v-model="faq.question" ></sw-field>
-                    <sw-field v-model="faq.answer" ></sw-field>
+                    <sw-field v-model="faq.question" label="Question"></sw-field>
+                    <sw-field v-model="faq.answer" label="Answer" ></sw-field>
                     <sw-entity-many-to-many-select
                         :localMode="faq.isNew()"
-                        v-model="faq.products">
+                        v-model="faq.products"
+                        label="Products">
                     </sw-entity-many-to-many-select>
-                    TODO ADD sw-entity-many-to-many-select
+                    <!--TODO ADD sw-entity-many-to-many-select-->
                 </sw-card>
+                <!--
                 <sw-card v-if="myDebugVar == 1">
                     FAQ DETAIL SET DEBUGVAR
                 </sw-card>
                 <sw-card v-if="myDebugVar == 2">
                     FAQ CREATE OVERRIDE SET DEBUGVAR
                 </sw-card>
+                -->
             </sw-card-view>
         </template>
     </sw-page>
