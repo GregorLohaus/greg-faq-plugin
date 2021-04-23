@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
 namespace Greg\FaqPlugin\Core\Content\Faq;
+use Shopware\Core\Content\Product\ProductCollection;
 use Shopware\Core\Framework\DataAbstractionLayer\Entity;
 use Shopware\Core\Framework\DataAbstractionLayer\EntityIdTrait;
 
@@ -15,6 +16,28 @@ class FaqEntity extends Entity {
      * @var string
      */
     protected  $answer;
+    /**
+     * @var ProductCollection|null
+     */
+    protected $products;
+
+    /**
+     * @return ProductCollection|null
+     */
+    public function getProducts(): ?ProductCollection
+    {
+        return $this->products;
+    }
+
+    /**
+     * @param ProductCollection|null $products
+     */
+    public function setProducts(?ProductCollection $products): void
+    {
+        $this->products = $products;
+    }
+
+
 
     /**
      * @return string

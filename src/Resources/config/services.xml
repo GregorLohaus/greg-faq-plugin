@@ -8,5 +8,11 @@
         <service id="Greg\FaqPlugin\Core\Content\Faq\FaqDefinition">
             <tag name="shopware.entity.definition" entity="greg_faq"/>
         </service>
+        <service id="Greg\FaqPlugin\Core\Content\Product\ProductExtension">
+            <tag name="shopware.entity.extension"/>
+        </service>
+        <service id="Greg\FaqPlugin\Core\Content\Faq\Aggregate\FaqProduct\FaqProductDefinition">
+            <tag name="shopware.entity.definition" entity="greg_faq_product"/>
+        </service>
     </services>
 </container>
