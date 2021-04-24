@@ -5,9 +5,9 @@
     <!--
     <li class="nav-item">
         NO EXTENSIONS FOUND
-    </li>
+    </li> was used for debugging
     -->
-    {% if page.product.extension('faqs').elements|length > 0 %}
+    {% if page.product.extension('faqs').elements|length > 0 %} <!-- assuming  $event->getCriteria()->addAssociation('faqs'); in the Criteria subscriber adds an extension -->
         <li class="nav-item">
             <a class="nav-link" id="faq-tab" data-toggle="tab" data-offcanvas-tabs="true" href="#faq-tab-pane" role="tab" aria-controls="faq-tab-pane" aria-selected="false">
                 <span>FAQs</span>
@@ -17,7 +17,7 @@
 {% endblock %}
 {% block page_product_detail_tabs_content_description %}
     {{ parent() }}
-    {% if page.product.extension('bundles').elements|length > 0 %}
+    {% if page.product.extension('faqs').elements|length > 0 %}
         <div class="tab-pane fade"
              id="faq-tab-pane"
              role="tabpanel"

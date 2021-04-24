@@ -7,6 +7,10 @@ use Shopware\Storefront\Page\Product\ProductPageCriteriaEvent;
 
 class ProductPageCriteriaSubscriber implements EventSubscriberInterface {
     private $configService;
+
+    // arguments passed to the __construct message have to be provided in
+    // /Resources/config/services.xml in a <argument> tag
+
     public function __construct(SystemConfigService $configService)
     {
         $this->configService = $configService;
@@ -20,6 +24,7 @@ class ProductPageCriteriaSubscriber implements EventSubscriberInterface {
 
     public function onProductCriteriaLoaded(ProductPageCriteriaEvent $event)
     {
+        //only adds faqs to the product page if showInStoreFront is checked defined in /Resources/config/config.xml
         if($this->configService->get('FaqPlugin.config.showInStoreFront')) {
             $event->getCriteria()->addAssociation('faqs');
         }

@@ -13,7 +13,6 @@
         <template slot="content">
             <sw-card-view>
                 <sw-card v-if="faq" :isLoading="isLoading">
-                    <!-- TODO add labels -->
                     <sw-field v-model="faq.question" label="Question"></sw-field>
                     <sw-field v-model="faq.answer" label="Answer" ></sw-field>
                     <sw-entity-many-to-many-select
@@ -21,7 +20,6 @@
                         v-model="faq.products"
                         label="Products">
                     </sw-entity-many-to-many-select>
-                    <!--TODO ADD sw-entity-many-to-many-select-->
                 </sw-card>
                 <!--
                 <sw-card v-if="myDebugVar == 1">

@@ -36,6 +36,8 @@ Shopware.Component.register('faqdetail', {
               this.faq = entity;
           });
       },
+
+        //gets called from template faqdetail.html.twig sw-button process @click
       onClickSave() {
           this.isLoading = true;
           this.repository.save(this.faq, Shopware.Context.api).then(()=>{
@@ -50,6 +52,8 @@ Shopware.Component.register('faqdetail', {
               });
           });
       },
+
+        //gets called from template faqdetail.html.twig sw-button process @process-finish TODO look up when process-finish event gets triggered
       saveFinish() {
           this.processSuccess = false;
       }

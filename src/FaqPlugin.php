@@ -19,12 +19,15 @@ class FaqPlugin extends Plugin
 
     public function uninstall(UninstallContext $context): void
     {
+        //parent is the Plugin class im assuming keepUserData returns false when the user checks
+        // "Remove all app data permanently" in the uninstall prompt
+        // TODO check this with DBeaver
         parent::uninstall($context);
 
         if ($context->keepUserData()) {
             return;
         }
-
+        //removing all added tables
         $connection = $this->container->get(Connection::class);
         $connection->executeStatement('DROP TABLE IF EXISTS `greg_faq_product`');
         $connection->executeStatement('DROP TABLE IF EXISTS `greg_faq`');
